@@ -1,17 +1,18 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Subject;
+
+use App\Models\Form;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class SubjectSeeder extends Seeder
+class FormSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Subject::factory(10)->create();
+        Form::factory(30)->create();
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.app.dashboard-simpadu', ['type_menu' => '']);
     })->name('home');
     Route::resource('user', UserController::class);
+    Route::resource('form', FormController::class);
     
 });
 
@@ -42,10 +44,8 @@ Route::middleware(['auth'])->group(function () {
 
 // })->name('login');
 // Route::get('/register', function () {
-
 //       return view('pages.auth.auth-register');
-
-// })->name('register');
+// });
 // Route::get('/forgot', function () {
 
 //     return view('pages.auth.auth-forgot-password');
